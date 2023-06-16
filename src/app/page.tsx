@@ -1,8 +1,3 @@
-export const config = {
-  runtime: "edge",
-  regions: ["dub1"],
-};
-
 type WaitTime = number | null;
 
 type WaitingTime = {
