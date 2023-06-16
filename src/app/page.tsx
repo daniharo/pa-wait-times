@@ -25,7 +25,8 @@ type Attractions = {
 
 async function getWaitingTimes() {
   const res = await fetch(
-    "https://s05y9cqvq5.execute-api.eu-west-1.amazonaws.com/default/getWaitingTimes"
+    "https://s05y9cqvq5.execute-api.eu-west-1.amazonaws.com/default/getWaitingTimes",
+    { next: { revalidate: 10 } }
   );
   return (await res.json()) as WaitingTime[];
 }
